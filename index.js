@@ -17,6 +17,11 @@ const tgBot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: false });
 
 const client = new Client({
   authStrategy: new LocalAuth(),
+  puppeteer: {
+    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH, // Use system Chromium!
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  },
 });
 
 // === CONFIG ===

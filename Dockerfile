@@ -20,6 +20,7 @@ RUN apt-get update && apt-get install -y \
     libnspr4 \
     libappindicator3-1 \
     libayatana-appindicator1 \
+    chromium\
     --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
@@ -29,11 +30,17 @@ WORKDIR /app
 # Copy package files first (use Docker cache)
 COPY package*.json ./
 
+# Tell puppeteer to skip download — we use system Chromium
+ENV PUPPETEER_SKIP_DOWNLOAD=true
+
 # Install deps
 RUN npm install --production
 
 # Copy rest of your files
 COPY . .
+
+# Environment var for Puppeteer to use system Chromium
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
 
 # EXPOSE 3000
 
