@@ -30,7 +30,7 @@ jobs:
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ vars.PROJECT_NAME }}:latest
 
       - name: SSH and Deploy
-        uses: shegzy-dev/deploy-docker-vm@v1
+        uses: shegzy-dev/deploy-docker-vm@v2
         with:
           host: ${{ secrets.VM_HOST }}
           username: ${{ secrets.VM_USER }}
