@@ -1,6 +1,0 @@
-2025/07/23-20:03:22.591 4890 Reusing MANIFEST D:\GitHub_Web\ChatSentinel\.wwebjs_auth\session\Default\Local Storage\leveldb/MANIFEST-000001
-2025/07/23-20:03:22.592 4890 Recovering log #3
-2025/07/23-20:03:22.593 4890 Reusing old log D:\GitHub_Web\ChatSentinel\.wwebjs_auth\session\Default\Local Storage\leveldb/000003.log 
-2025/07/23-20:06:29.232 610c Level-0 table #5: started
-2025/07/23-20:06:29.460 610c Level-0 table #5: 16847 bytes OK
-2025/07/23-20:06:29.533 610c Delete type=0 #3

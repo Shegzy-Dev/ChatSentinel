@@ -45,7 +45,7 @@ jspm_packages/
 web_modules/
 
 # Whatsapp WebJS
-.wwebjs_auth/
+.wwebjs_auth/session
 .wwebjs_cache/
 
 # TypeScript cache
