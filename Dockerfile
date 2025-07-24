@@ -13,7 +13,7 @@ RUN npm install --production
 # Copy rest of your files
 COPY . .
 
-EXPOSE 3000
+# EXPOSE 3000
 
 # Run your bot
 CMD ["npm", "start"]
