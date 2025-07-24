@@ -1,5 +1,5 @@
 # Use Node.js LTS
-FROM node:18-alpine
+FROM node:18
 
 # Create app dir
 WORKDIR /app
@@ -8,13 +8,12 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install deps
-RUN npm install
+RUN npm install --production
 
 # Copy rest of your files
 COPY . .
 
-# Expose no port (it’s headless)
-# If you ever add a web UI, you’d EXPOSE 3000 or so
+EXPOSE 3000
 
 # Run your bot
-CMD ["node", "index.js"]
+CMD ["npm", "start"]
