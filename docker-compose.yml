@@ -1,0 +1,9 @@
+services:
+  chatsentinel:
+    build: .
+    container_name: chatsentinel
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./wwebjs_auth:/app/.wwebjs_auth
